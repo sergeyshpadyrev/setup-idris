@@ -1,1 +1,1 @@
-FROM dgellow/idris2
+FROM dgellow/idris2:latest
