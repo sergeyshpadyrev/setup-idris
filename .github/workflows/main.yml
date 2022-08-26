@@ -7,9 +7,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Run
+      - name: Setup Idris
         uses: ./ 
-      - name: Check folder
-        run: ls ~/.idris2/bin
-      - name: Check idris
+      - name: Check idris version
         run: idris2 -v
+      - name: Compile 
+        run: idris2 test.idr -o main
+      - name: Run executable
+        run: ./build/exec/main
