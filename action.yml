@@ -1,7 +1,5 @@
 name: 'Setup Idris 2'
 description: 'Install Idris 2'
-env: 
-  SCHEME: scheme
 runs:
   using: 'composite'
   steps:
@@ -17,6 +15,7 @@ runs:
     - name: Build idris2
       run: |
         cd idris2-source
+        export SCHEME=scheme
         export PATH="${PATH}:/root/.idris2/bin"
         make bootstrap
         make install
