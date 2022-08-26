@@ -1,10 +1,5 @@
 name: 'Setup Idris'
 description: 'Install Idris'
-inputs:
-  idris-version:  
-    description: 'Idris version (1 or 2)'
-    required: true
-    default: 2
 runs:
   using: 'composite'
   steps:
