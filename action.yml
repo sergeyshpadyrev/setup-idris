@@ -13,7 +13,7 @@ runs:
       with:
         name: idris-lang/Idris2
         path: idris2-source
-        ref: refs/tags/v0.3.0
+        ref: v0.3.0
     - name: Build idris2
       run: |
         cd idris2-source
