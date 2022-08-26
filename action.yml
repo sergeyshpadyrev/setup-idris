@@ -1,5 +1,8 @@
 name: 'Setup Idris'
 description: 'Install Idris'
+branding:
+  color: purple
+  icon: download
 runs:
   using: 'composite'
   steps:
