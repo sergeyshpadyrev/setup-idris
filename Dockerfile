@@ -1,3 +1,3 @@
-FROM nixos/nix
+FROM dgellow/idris2
 
-RUN nix-env -i idris2
+CMD ls -a
