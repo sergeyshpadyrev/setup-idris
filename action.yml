@@ -9,9 +9,7 @@ runs:
     - name: Download idris2
       run: |
         wget -O idris2-ubuntu.tar.gz https://github.com/sergeyshpadyrev/setup-idris-builds/releases/download/latest/idris2-ubuntu.tar.gz 
-        mkdir ~/.idris2
-        mkdir ~/.idris2/bin
-        tar -xvf idris2-ubuntu.tar.gz -C ~/.idris2/bin
+        tar -xvf idris2-ubuntu.tar.gz -C $HOME
         rm ./idris2-ubuntu.tar.gz
       shell: bash
     - name: Put idris2 executable to path
