@@ -1,8 +1,8 @@
 name: 'Setup Idris'
 description: 'Install Idris'
 branding:
-  color: purple
-  icon: download
+  color: red
+  icon: cpu
 runs:
   using: 'composite'
   steps:
