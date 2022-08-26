@@ -6,7 +6,7 @@ runs:
   using: 'composite'
   steps:
     - name: Install dependencies
-      run: sudo apt-get -y install build-essential clang chezscheme
+      run: sudo apt-get -y install build-essential clang chezscheme git
       shell: bash
     - name: Checkout idris2 repository
       uses: actions/checkout@v3
