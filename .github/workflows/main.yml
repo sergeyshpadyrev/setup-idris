@@ -11,7 +11,3 @@ jobs:
         uses: ./ 
       - name: Check idris version
         run: idris2 -v
-      - name: Compile 
-        run: idris2 test.idr -o main
-      - name: Run executable
-        run: ./build/exec/main
