@@ -15,3 +15,5 @@ runs:
     - name: Put idris2 executable to path
       run: echo "$HOME/.idris2/bin/" >> $GITHUB_PATH
       shell: bash
+    - name: Make alias for idris2
+      run: shopt -s expand_aliases && alias idris='idris2'
