@@ -1,3 +1,3 @@
 FROM dgellow/idris2
 
-CMD ls -a
+RUN ls -a
