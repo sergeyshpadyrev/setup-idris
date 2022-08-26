@@ -1,5 +1,5 @@
 # Github action for Idris setup 
 
-Github action for installing Idris and Idris 2
+Github action for installing Idris/Idris2
 
 ## Usage
