@@ -25,6 +25,12 @@ runs:
         make bootstrap
         make install
       shell: bash
+    - name: Test idris2
+      run: ls ~/.idris2/bin/
+      shell: bash
+    - name: Test idris22
+      run: ~/.idris2/bin/idris2 -v
+      shell: bash
     - name: Put idris2 executable to path
       run: echo 'export PATH="~/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc"
       shell: bash
