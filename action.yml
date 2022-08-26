@@ -16,10 +16,10 @@ runs:
       run: |
         cd idris2-source
         export SCHEME=scheme
-        export PATH="${PATH}:/root/.idris2/bin"
+        export PATH="${PATH}:~/.idris2/bin"
         make bootstrap
         make install
       shell: bash
     - name: Put idris2 executable to path
-      run: echo 'export PATH="/root/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc"
+      run: echo 'export PATH="~/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc"
       shell: bash
