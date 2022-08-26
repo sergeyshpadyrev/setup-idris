@@ -32,5 +32,5 @@ runs:
       run: ~/.idris2/bin/idris2 -v
       shell: bash
     - name: Put idris2 executable to path
-      run: echo "~/.idris2/bin/" >> $GITHUB_PATH
+      run: echo "$HOME/.idris2/bin/" >> $GITHUB_PATH
       shell: bash
