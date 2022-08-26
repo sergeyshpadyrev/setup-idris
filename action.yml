@@ -7,6 +7,7 @@ runs:
   steps:
     - name: Install dependencies
       run: apt-get -y install build-essential clang chezscheme
+      shell: bash
     - name: Checkout idris2 repository
       uses: actions/checkout@3
       with:
@@ -19,5 +20,7 @@ runs:
         export PATH="${PATH}:/root/.idris2/bin"
         make bootstrap
         make install
+      shell: bash
     - name: Put idris2 executable to path
       run: echo 'export PATH="/root/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc"
+      shell: bash
