@@ -4,7 +4,7 @@ ENV SCHEME=scheme
 
 WORKDIR /idris2-compiler/
 
-RUN apt-get update
+RUN apt-get -qq update
 RUN apt-get -y install build-essential git clang chezscheme
 RUN git clone https://github.com/idris-lang/Idris2.git
 
