@@ -1,7 +1,8 @@
 # Github action for Idris setup 
 
 This action sets up a working environment for [Idris](https://www.idris-lang.org/) programming language. <br/>
-It supports both versions of the language: `idris` and `idris2`.
+It's based on `idris2` version of the language. 
+The deprecated version `idris` is not supported
 
 ## Usage
 ```yaml
@@ -18,6 +19,4 @@ jobs:
         uses: sergeyshpadyrev/setup-idris@v1
       - name: Check Idris
         run: idris -v
-      - name: Check Idris2
-        run: idris2 -v
 ```
