@@ -16,5 +16,5 @@ runs:
       run: echo "$HOME/.idris2/bin/" >> $GITHUB_PATH
       shell: bash
     - name: Make alias for idris2
-      run: shopt -s expand_aliases && alias idris='idris2'
+      run: ln -sf $HOME/.idris2/bin/idris2 $HOME/.idris2/bin/idris
       shell: bash
