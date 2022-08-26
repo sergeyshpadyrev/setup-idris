@@ -7,4 +7,6 @@ inputs:
     default: 'idris2'
 runs:
   using: 'docker'
-  image: $IDRIS_VERSION
+  image: 'Dockerfile'
+  build-args: |
+     IDRIS_VERSION=${{ inputs.idris-version }}
