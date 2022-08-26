@@ -10,4 +10,4 @@ jobs:
       - name: Setup Idris
         uses: ./ 
       - name: Check idris version
-        run: idris2 -v
+        run: idris -v
