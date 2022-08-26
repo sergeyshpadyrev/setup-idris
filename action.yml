@@ -1,10 +1,10 @@
 name: 'Setup Idris'
 description: 'Install Idris compiler'
 inputs:
-  language-version: 
+  idris-version: 
     description: 'Idris version'
     required: true
     default: 2
 runs:
   using: 'docker'
-  image: ${{ ['dgellow/idris', 'dgellow/idris2'][inputs.language-version - 1] }}
+  image: Dockerfile${{ inputs.idris-version }}
