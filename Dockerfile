@@ -1,17 +1,14 @@
-FROM ubuntu as base
+FROM ubuntu:latest
 
-ARG VERSION=v0.3.0
+WORKDIR /idris2-compiler/
 
-WORKDIR /src
 RUN apt-get update && apt-get -y install build-essential git clang chezscheme
 RUN git clone https://github.com/idris-lang/Idris2.git
-WORKDIR /src/Idris2
-RUN git checkout ${VERSION}
-ENV SCHEME=scheme
-RUN export PATH="${PATH}:/root/.idris2/bin" && make bootstrap && make install
 
-FROM ubuntu
-COPY --from=base /root/.idris2 /root/.idris2
-ENV SCHEME=scheme
-RUN apt-get update && apt-get -y install chezscheme
-RUN echo 'export PATH="/root/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc" && echo 'alias idris=idris2' >> "${HOME}/.bashrc"
+WORKDIR /idris2-compiler/Idris2
+
+RUN make bootstrap && make install
+RUN export PATH="${PATH}:/root/.idris2/bin"
+
+RUN echo 'export PATH="/root/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc" 
+RUN echo 'alias idris=idris2' >> "${HOME}/.bashrc"
