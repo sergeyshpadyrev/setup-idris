@@ -1,12 +1,5 @@
-name: 'Setup Idris'
-description: 'Install Idris compiler'
-inputs:
-  idris-version: 
-    description: 'Idris version'
-    required: true
-    default: 'idris2'
+name: 'Setup Idris 2'
+description: 'Install Idris 2'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  build-args: |
-     IDRIS_VERSION=${{ inputs.idris-version }}
