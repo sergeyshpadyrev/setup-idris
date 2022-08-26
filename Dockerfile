@@ -7,7 +7,9 @@ RUN git clone https://github.com/idris-lang/Idris2.git
 
 WORKDIR /idris2-compiler/Idris2
 
-RUN make bootstrap && make install
+RUN git checkout v0.5.1
+RUN make bootstrap 
+RUN make install
 RUN export PATH="${PATH}:/root/.idris2/bin"
 
 RUN echo 'export PATH="/root/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc" 
