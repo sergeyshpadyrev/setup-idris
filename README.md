@@ -12,7 +12,12 @@ jobs:
     name: Run Idris
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: sergeyshpadyrev/setup-idris@v1
-      - run: idris2 -v
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Idris
+        uses: sergeyshpadyrev/setup-idris@v1
+      - name: Check Idris
+        run: idris -v
+      - name: Check Idris2
+        run: idris2 -v
 ```
