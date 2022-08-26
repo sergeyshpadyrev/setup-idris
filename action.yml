@@ -17,3 +17,4 @@ runs:
       shell: bash
     - name: Make alias for idris2
       run: shopt -s expand_aliases && alias idris='idris2'
+      shell: bash
