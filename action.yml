@@ -4,7 +4,9 @@ inputs:
   idris-version: 
     description: 'Idris version'
     required: true
-    default: 2
+    default: 'idris2'
 runs:
   using: 'docker'
-  image: Dockerfile ${{ inputs.idris-version }}
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.idris-version }}
