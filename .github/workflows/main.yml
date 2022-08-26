@@ -12,4 +12,4 @@ jobs:
       - name: Check user
         run: whoami
       - name: Check idris
-        run: /root/.idris2/bin/idris2 -v
+        run: idris2 -v
