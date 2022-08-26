@@ -14,6 +14,4 @@ WORKDIR /idris2-compiler/Idris2
 RUN git checkout v0.5.1
 RUN chmod -R a-w bootstrap
 RUN export PATH="${PATH}:/root/.idris2/bin" && make bootstrap & make install
-
-RUN ls -a 
-RUN ls .idris2
+RUN echo 'export PATH="/root/.idris2/bin/:${PATH}"' >> "${HOME}/.bashrc"
