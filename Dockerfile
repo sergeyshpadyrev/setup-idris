@@ -1,2 +1,1 @@
-ARG IDRIS_VERSION
-FROM dgellow/$IDRIS_VERSION
+FROM dgellow/idris2
