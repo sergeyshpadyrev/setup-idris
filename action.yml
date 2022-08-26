@@ -1,5 +1,7 @@
 name: 'Setup Idris 2'
 description: 'Install Idris 2'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'composite'
+  steps:
+    - name: Run
+      run: ls
