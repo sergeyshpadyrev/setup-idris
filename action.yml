@@ -9,9 +9,15 @@ runs:
     - name: Install dependencies
       run: sudo apt-get -y install chezscheme
       shell: bash
+    - name: Get latest build
+      id: idris2build
+      uses: pozetroninc/github-action-get-latest-release@master
+      with:
+        repository: sergeyshpadyrev/setup-idris-builds
+        excludes: prerelease, draft
     - name: Download idris2
       run: |
-        wget -O idris2-ubuntu.tar.gz https://github.com/sergeyshpadyrev/setup-idris-builds/releases/download/latest/idris2-ubuntu.tar.gz 
+        wget -O idris2-ubuntu.tar.gz https://github.com/sergeyshpadyrev/setup-idris-builds/releases/download/${{ steps.idris2build.outputs.release }}/idris2-ubuntu.tar.gz 
         tar -xvf idris2-ubuntu.tar.gz -C $HOME
         rm ./idris2-ubuntu.tar.gz
       shell: bash
