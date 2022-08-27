@@ -1,5 +1,7 @@
 # setup-idris
 
+![Test](https://github.com/sergeyshpadyrev/setup-idris-builds/actions/workflows/testAction.yml/badge.svg)
+
 This action sets up a working environment for [Idris](https://www.idris-lang.org/) programming language. <br/>
 It's based on Idris2, the old version of the language is not supported.
 
@@ -15,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Setup Idris
-        uses: sergeyshpadyrev/setup-idris@v1.1
+        uses: sergeyshpadyrev/setup-idris@v1.2
       - name: Compile program
         run: idris main.idr -o main
       - name: Run program
